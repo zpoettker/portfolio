@@ -50,4 +50,8 @@ https://safetpojskic.com/
 
 **Design direction:**
 
-I would like a dark grey background, subtle hover animations, contrasting colors, and a professional look.
+- Background: `#161616`
+- Accent: `#ffe500` (yellow) — labels, buttons, highlights, subtle glows
+- Subtle hover animations: `hover:-translate-y-0.5`, `hover:brightness-110`
+- Rounded corners (`rounded-2xl`), not circles, for images
+- Two-column layouts where content pairs with visuals
