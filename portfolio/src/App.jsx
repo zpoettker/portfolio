@@ -1,6 +1,8 @@
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
+import Resume from './components/Resume'
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <div id="home">
           <Hero />
         </div>
+        <About />
+        <Resume />
       </main>
     </div>
   )
