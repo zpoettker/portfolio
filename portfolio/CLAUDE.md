@@ -30,20 +30,24 @@ Static assets (images, SVGs) go in `src/assets/` and are imported directly into 
 
 ## Design Inspiration
 
+ **Subject information:**
+
+ Zach Poettker
+ 23 years old
+ CS student at SIUE
+ Expecting graduation 2027
+
 **Reference sites / URLs:**
 
-<!-- Add URLs here, e.g.:
-- https://example-portfolio.com — like the sticky nav and project card layout
--->
+https://www.christophermeyer.dev/
+https://benscott.dev/#about
+https://safetpojskic.com/
 
 **Inspiration images:**
 
-<!-- Drop screenshot paths or image descriptions here, e.g.:
-- src/assets/inspo/hero-layout.png — minimal dark hero with centered name and subtitle
+<!-- N/A
 -->
 
 **Design direction:**
 
-<!-- Summarize the overall vibe once it's decided, e.g.:
-- Dark background, high contrast, monospace font for code elements, subtle hover animations
--->
+I would like a dark grey background, subtle hover animations, contrasting colors, and a professional look.
