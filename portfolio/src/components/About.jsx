@@ -1,16 +1,32 @@
 import { useEffect, useRef, useState } from 'react'
 
+import iconJS from '../assets/icons/1.png'
+import iconHTML from '../assets/icons/2.png'
+import iconCSS from '../assets/icons/3.png'
+import iconReact from '../assets/icons/4.png'
+import iconSQL from '../assets/icons/5.png'
+import iconCpp from '../assets/icons/6.png'
+import iconMySQL from '../assets/icons/7.png'
+import iconExcel from '../assets/icons/8.png'
+import iconPython from '../assets/icons/9.png'
+import iconNode from '../assets/icons/10.png'
+import iconRuby from '../assets/icons/11.png'
+import iconGit from '../assets/icons/12.png'
+import iconGitHub from '../assets/icons/13.png'
+
 const TECHNOLOGIES = [
-  { name: 'Java' },
-  { name: 'Python' },
-  { name: 'C++' },
-  { name: 'JavaScript' },
-  { name: 'React' },
-  { name: 'HTML / CSS' },
-  { name: 'Node.js' },
-  { name: 'SQL' },
-  { name: 'Git' },
-  { name: 'Linux' },
+  { name: 'JavaScript', icon: iconJS },
+  { name: 'Python', icon: iconPython },
+  { name: 'React', icon: iconReact },
+  { name: 'HTML', icon: iconHTML },
+  { name: 'CSS', icon: iconCSS },
+  { name: 'C/C++', icon: iconCpp },
+  { name: 'Node.js', icon: iconNode },
+  { name: 'MySQL', icon: iconMySQL },
+  { name: 'SQL', icon: iconSQL },
+  { name: 'Streamlit', icon: iconRuby },
+  { name: 'Excel', icon: iconExcel },
+  { name: 'GitHub', icon: iconGitHub },
 ]
 
 function useFadeIn(threshold = 0.15) {
@@ -96,10 +112,10 @@ export default function About() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            {TECHNOLOGIES.map(({ name }, i) => (
+            {TECHNOLOGIES.map(({ name, icon, icons }, i) => (
               <span
                 key={name}
-                className="px-4 py-2 rounded-lg font-mono text-sm text-gray-200 cursor-default select-none transition-all duration-200 hover:-translate-y-0.5"
+                className="flex items-center gap-4 px-6 py-4 rounded-xl font-mono text-base text-gray-200 cursor-default select-none"
                 style={{
                   backgroundColor: '#1e1e1e',
                   border: '1px solid #2e2e2e',
@@ -109,13 +125,21 @@ export default function About() {
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.borderColor = '#ffe500'
-                  e.currentTarget.style.boxShadow = '0 0 12px rgba(255,229,0,0.12)'
+                  e.currentTarget.style.boxShadow = '0 0 16px rgba(255,229,0,0.12)'
+                  e.currentTarget.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.borderColor = '#2e2e2e'
                   e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.transform = 'translateY(0)'
                 }}
               >
+                {icons
+                  ? icons.map((src, j) => (
+                      <img key={j} src={src} alt="" className="w-9 h-9 object-contain" />
+                    ))
+                  : icon && <img src={icon} alt={name} className="w-9 h-9 object-contain" />
+                }
                 {name}
               </span>
             ))}
