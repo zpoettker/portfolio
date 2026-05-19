@@ -11,22 +11,27 @@ import iconExcel from '../assets/icons/8.png'
 import iconPython from '../assets/icons/9.png'
 import iconNode from '../assets/icons/10.png'
 import iconRuby from '../assets/icons/11.png'
-import iconGit from '../assets/icons/12.png'
 import iconGitHub from '../assets/icons/13.png'
+import iconWord from '../assets/icons/14.png'
+import iconTypeScript from '../assets/icons/15.png'
+import iconTailwind from '../assets/icons/16.png'
 
 const TECHNOLOGIES = [
   { name: 'JavaScript', icon: iconJS },
   { name: 'Python', icon: iconPython },
-  { name: 'React', icon: iconReact },
+  { name: 'C/C++', icon: iconCpp },
+  { name: 'SQL', icon: iconSQL },
+  { name: 'TypeScript', icon: iconTypeScript },
   { name: 'HTML', icon: iconHTML },
   { name: 'CSS', icon: iconCSS },
-  { name: 'C/C++', icon: iconCpp },
+  { name: 'React', icon: iconReact },
   { name: 'Node.js', icon: iconNode },
   { name: 'MySQL', icon: iconMySQL },
-  { name: 'SQL', icon: iconSQL },
   { name: 'Streamlit', icon: iconRuby },
-  { name: 'Excel', icon: iconExcel },
+  { name: 'Tailwind CSS', icon: iconTailwind },
   { name: 'GitHub', icon: iconGitHub },
+  { name: 'Word', icon: iconWord },
+  { name: 'Excel', icon: iconExcel },
 ]
 
 function useFadeIn(threshold = 0.15) {
