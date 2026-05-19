@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-// Drop your resume image into src/assets/resume.png and PDF into public/resume.pdf
+// Drop resume-preview.png and resume.pdf into the public/ folder
 
 function useFadeIn(threshold = 0.1) {
   const ref = useRef(null)
@@ -57,13 +57,7 @@ function Lightbox({ src, onClose }) {
 export default function Resume() {
   const [sectionRef, visible] = useFadeIn(0.1)
   const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [resumeImg, setResumeImg] = useState(null)
-
-  useEffect(() => {
-    import('../assets/resume.png')
-      .then(m => setResumeImg(m.default))
-      .catch(() => setResumeImg(null))
-  }, [])
+  const resumeImg = '/resume-preview.png'
 
   return (
     <>
