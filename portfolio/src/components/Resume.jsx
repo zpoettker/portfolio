@@ -57,7 +57,7 @@ function Lightbox({ src, onClose }) {
 export default function Resume() {
   const [sectionRef, visible] = useFadeIn(0.1)
   const [lightboxOpen, setLightboxOpen] = useState(false)
-  const resumeImg = '/resume-preview.png'
+  const resumeImg = '/Resume.png'
 
   return (
     <>
