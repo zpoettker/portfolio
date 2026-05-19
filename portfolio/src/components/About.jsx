@@ -91,8 +91,8 @@ export default function About() {
           <p className="text-gray-300 text-lg leading-relaxed">
             I'm a Computer Science student at Southern Illinois University Edwardsville,
             on track to graduate in 2027. I'm passionate about writing clean, purposeful
-            software — the kind that's easy to understand, easy to maintain, and actually
-            solves the problem at hand.
+            software. I am excited to pursue a career in software engineering, working with 
+            intelligent people to create useful technology for the marketplace.
           </p>
           <p className="text-gray-400 text-lg leading-relaxed">
             My background spans systems-level programming and modern web development.
