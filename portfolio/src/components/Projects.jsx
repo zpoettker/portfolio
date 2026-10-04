@@ -1,42 +1,46 @@
 import { useEffect, useRef, useState } from 'react'
 
-import projectImg1 from '../assets/projects/1.png'
-import projectImg2 from '../assets/projects/2.png'
-import projectImg3 from '../assets/projects/3.png'
-import projectImg4 from '../assets/projects/4.png'
+import eztraderImg from '../assets/projects/eztrader.png'
+import riseImg from '../assets/projects/rise.png'
+import aiJobMatchingImg from '../assets/projects/ai-job-matching.png'
+import weatherioImg from '../assets/projects/weatherio.png'
 
 const projects = [
   {
-    title: 'Job Market Intelligence',
+    title: 'EZTrader',
     description:
-      'Full-stack analytics platform that ingests and analyzes 100k+ real job listings to surface skill demand trends, salary insights, and hiring patterns across the tech industry.',
-    tags: ['Python', 'Flask', 'MySQL', 'Streamlit'],
-    href: 'https://github.com/zpoettker/job-market-intelligence',
-    image: projectImg1,
+      'Futures trading journal that imports NinjaTrader and Tradovate CSVs, pairs fills into round-trip trades, and tracks win rate, profit factor, expectancy, and drawdown with an equity curve and P&L calendar.',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'FastAPI'],
+    href: 'https://github.com/zpoettker/EZTrader',
+    image: eztraderImg,
   },
   {
-    title: 'Trading Journal',
+    title: 'Rise',
     description:
-      'A personal trade-logging app for tracking entries, exits, and performance over time. Built to sharpen discipline and identify patterns in trading decisions.',
-    tags: ['JavaScript', 'HTML/CSS'],
-    href: 'https://github.com/zpoettker/Trading-JOURNAL',
-    image: projectImg2,
+      'Morning log-on tracker that records the first visit each weekday and grades it against a target time. Shows streaks, hit rate, a year heatmap, and an editable calendar, with all data kept in the browser.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Vitest'],
+    href: 'https://github.com/zpoettker/Rise',
+    image: riseImg,
+    // Zoomed out to show the header, stat cards, and part of the heatmap;
+    // the gradient matches the screenshot's background so the sides blend in
+    imageStyle: { height: '210%', width: 'auto', maxWidth: 'none', flexShrink: 0 },
+    imageBg: 'linear-gradient(to bottom, #ffedcc, #fffaf2)',
   },
   {
-    title: 'Stock Analysis App',
+    title: 'AI Job-Matching System',
     description:
-      'A browser-based tool for forming market hypotheses and structuring trade plans. Visualizes price data and helps build conviction before entering a position.',
-    tags: ['HTML', 'JavaScript', 'CSS'],
-    href: 'https://github.com/zpoettker/Stock-Analysis',
-    image: projectImg3,
+      'Python pipeline that pulls software job postings from the Adzuna API, embeds them alongside a resume with OpenAI\'s text-embedding-3-small model, and ranks the best matches by cosine similarity.',
+    tags: ['Python', 'OpenAI API', 'Adzuna API', 'Docker'],
+    href: 'https://github.com/zpoettker/AI-Job-Matching-System',
+    image: aiJobMatchingImg,
   },
   {
-    title: 'Castle Crashers CYOA',
+    title: 'Weatherio',
     description:
-      'An interactive choose-your-own-adventure game set in a fantasy world. Players navigate branching story paths with meaningful choices that lead to different outcomes.',
-    tags: ['JavaScript', 'HTML/CSS'],
-    href: 'https://github.com/zpoettker/Castle-Crashers-CYOA',
-    image: projectImg4,
+      'Weather app that pulls live data from the OpenWeather API for any city or your current location. Shows current conditions, air quality, sunrise and sunset, a 5-day forecast, and the next 24 hours in 3-hour steps.',
+    tags: ['JavaScript', 'HTML/CSS', 'OpenWeather API'],
+    href: 'https://github.com/zpoettker/Weather.io',
+    image: weatherioImg,
   },
 ]
 
@@ -76,8 +80,8 @@ function ProjectCard({ project, index, visible }) {
       }}
     >
       {/* Project image */}
-      <div className="w-full h-44 rounded-xl overflow-hidden flex-shrink-0" style={{ backgroundColor: '#242424' }}>
-        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+      <div className="w-full h-44 rounded-xl overflow-hidden flex-shrink-0 flex justify-center" style={{ background: project.imageBg ?? '#242424' }}>
+        <img src={project.image} alt={project.title} className="w-full h-full object-cover" style={project.imageStyle} />
       </div>
 
       {/* GitHub link */}
