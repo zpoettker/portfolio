@@ -11,7 +11,7 @@ const projects = [
     description:
       'Futures trading journal that imports NinjaTrader and Tradovate CSVs, pairs fills into round-trip trades, and tracks win rate, profit factor, expectancy, and drawdown with an equity curve and P&L calendar.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'FastAPI'],
-    href: 'https://github.com/zpoettker/EZTrader',
+    href: 'https://eztrader.zachpoettker.com/',
     image: eztraderImg,
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description:
       'Morning log-on tracker that records the first visit each weekday and grades it against a target time. Shows streaks, hit rate, a year heatmap, and an editable calendar, with all data kept in the browser.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Vitest'],
-    href: 'https://github.com/zpoettker/Rise',
+    href: 'https://login-tracker-olive.vercel.app/',
     image: riseImg,
     // Zoomed out to show the header, stat cards, and part of the heatmap;
     // the gradient matches the screenshot's background so the sides blend in
@@ -39,7 +39,7 @@ const projects = [
     description:
       'Weather app that pulls live data from the OpenWeather API for any city or your current location. Shows current conditions, air quality, sunrise and sunset, a 5-day forecast, and the next 24 hours in 3-hour steps.',
     tags: ['JavaScript', 'HTML/CSS', 'OpenWeather API'],
-    href: 'https://github.com/zpoettker/Weather.io',
+    href: 'https://zpoettker.github.io/Weather.io/',
     image: weatherioImg,
   },
 ]

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-// Drop resume-preview.png and resume.pdf into the public/ folder
+// Drop Resume.png and Zach_Poettker_Resume.pdf into the public/ folder
 
 function useFadeIn(threshold = 0.1) {
   const ref = useRef(null)
@@ -156,7 +156,7 @@ export default function Resume() {
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Download */}
               <a
-                href="/resume.pdf"
+                href="/Zach_Poettker_Resume.pdf"
                 download
                 className="flex items-center gap-3 px-6 py-3 font-semibold rounded-lg transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
                 style={{ backgroundColor: '#ffe500', color: '#161616' }}
@@ -171,7 +171,7 @@ export default function Resume() {
 
               {/* Open PDF */}
               <a
-                href="/resume.pdf"
+                href="/Zach_Poettker_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-6 py-3 font-semibold rounded-lg transition-all duration-200 hover:-translate-y-0.5"
